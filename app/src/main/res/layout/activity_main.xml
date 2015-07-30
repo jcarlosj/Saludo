@@ -10,7 +10,7 @@
         android:id="@+id/tv_Pregunta" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_Nombre"
         android:layout_below="@+id/tv_Pregunta"
@@ -18,7 +18,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/saludo"
         android:id="@+id/btn_Saludo"
