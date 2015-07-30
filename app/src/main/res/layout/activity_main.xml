@@ -24,6 +24,7 @@
         android:id="@+id/btn_Saludo"
         android:layout_below="@+id/et_Nombre"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="saludo" />
 
 </RelativeLayout>
