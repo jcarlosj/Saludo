@@ -15,7 +15,8 @@
         android:id="@+id/et_Nombre"
         android:layout_below="@+id/tv_Pregunta"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:inputType="text" />
 
     <Button
         android:layout_width="match_parent"
@@ -26,13 +27,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="saludo" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_Saludo"
-        android:layout_below="@+id/btn_Saludo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -7,13 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText nombre;
-    private TextView saludo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nombre = ( EditText ) findViewById( R .id .et_Nombre );
-        saludo = ( TextView ) findViewById( R .id .tv_Saludo );
+
     }
 
     @Override
@@ -48,13 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void saludo( View v ) {
 
-        saludo .setText( "Hola " + nombre .getText() .toString() );
-
-        /*
         Intent i = new Intent( this, SaludoActivity.class );
+        i .putExtra( "name", nombre .getText() .toString() );
         startActivity( i );
-        */
-
 
     }
 }
