@@ -7,17 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText nombre;
+    private String mensaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mensaje = "El campo no puede estar vacio";
         nombre = ( EditText ) findViewById( R .id .et_Nombre );
 
     }
@@ -46,9 +49,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void saludo( View v ) {
 
-        Intent i = new Intent( this, SaludoActivity.class );
-        i .putExtra( "name", nombre .getText() .toString() );
-        startActivity( i );
+        if( nombre .getText() .toString() .length() != 0 ) {
+            Intent i = new Intent( this, SaludoActivity.class );
+            i .putExtra( "name", nombre .getText() .toString() );
+            startActivity( i );
+        }
+        else {
+            Toast .makeText(getApplicationContext(), mensaje, Toast .LENGTH_SHORT ) .show();
+        }
+
+
 
     }
 }
